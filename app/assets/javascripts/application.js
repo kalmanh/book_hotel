@@ -12,8 +12,11 @@ $(function(){
     "Philadelphia", "Las Vegas"
   ];
 
-  $("#city").autocomplete({source: availableCities});
+  $('body').on('click', '#city', function(){
+    $(this).autocomplete({source: availableCities});
+  });
 
-  $("#date_in").datepicker({dateFormat: "yy-mm-dd"});
-
-});
+  $('body').on('focus', '#date_in', function(){
+    $(this).datepicker({dateFormat: "yy-mm-dd"});
+  });
+})
